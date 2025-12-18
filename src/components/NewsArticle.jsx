@@ -42,8 +42,7 @@ export default function NewsArticle({ article }) {
       </div>
 
       <div className="flex items-center justify-between pt-0.5 border-t border-[#2f2f2f] border-b mt-10 pb-2 pt-2">
-     <ShareOnInline title={article.title} />
-
+        <ShareOnInline title={article.title} />
       </div>
       <div className="border mt-0.5 mb-8"></div>
     </div>

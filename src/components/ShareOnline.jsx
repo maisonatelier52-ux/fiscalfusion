@@ -4,11 +4,10 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import {
   FaFacebookF,
-  FaInstagram,
-  FaMedium,
   FaTwitter,
+  FaLinkedinIn,
+  FaWhatsapp,
 } from "react-icons/fa";
-import SubstackIconBlack from "./SubstackIconBlack";
 
 export default function ShareOnInline({ title }) {
   const [url, setUrl] = useState("");
@@ -46,37 +45,26 @@ export default function ShareOnInline({ title }) {
         <FaFacebookF className="cursor-pointer" />
       </Link>
 
-      {/* Instagram (no direct share URL — fallback to profile or site) */}
+      {/* LinkedIn */}
       <Link
-        href="https://www.instagram.com/"
+        href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Instagram"
+        aria-label="Share on LinkedIn"
         className="no-underline"
       >
-        <FaInstagram className="cursor-pointer" />
+        <FaLinkedinIn className="cursor-pointer" />
       </Link>
 
-      {/* Medium */}
+      {/* WhatsApp */}
       <Link
-        href={`https://medium.com/new-story`}
+        href={`https://api.whatsapp.com/send?text=${encodedTitle}%20${encodedUrl}`}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Medium"
+        aria-label="Share on WhatsApp"
         className="no-underline"
       >
-        <FaMedium className="cursor-pointer" />
-      </Link>
-
-      {/* Substack */}
-      <Link
-        href={`https://substack.com/`}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Substack"
-        className="no-underline"
-      >
-        <SubstackIconBlack className="text-black w-6 h-6" />
+        <FaWhatsapp className="cursor-pointer" />
       </Link>
     </div>
   );
