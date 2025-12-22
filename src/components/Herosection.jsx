@@ -39,7 +39,7 @@ export default function HeroSection({ data }) {
     flex flex-col items-center 
     text-center
     md:pt-30 pb-0
-    p-10
+    p-5
   "
         >
           <h2 className="text-sm md:text-6xl text-[#2f2f2f] capitalize font-light tracking-wide md:mb-5 mb-1">
@@ -82,17 +82,23 @@ export default function HeroSection({ data }) {
             </span>
           </Link>
 
-          <div className="flex justify-center md:space-x-4 space-x-1">
-            {data.map((_, i) => (
-              <button
-                key={i}
-                onClick={() => setCurrent(i)}
-                className={`w-3 h-3 border border-white rotate-45 transition ${current === i ? "bg-white" : "bg-transparent"
-                  }`}
-                aria-label={`Go to slide ${i + 1}`}
-              />
-            ))}
-          </div>
+      <div className="flex justify-center ">
+  {data.map((_, i) => (
+    <button
+      key={i}
+      onClick={() => setCurrent(i)}
+      aria-label={`Go to slide ${i + 1}`}
+      className="w-8 h-8 flex items-center justify-center"
+    >
+      <span
+        className={`w-3 h-3 rotate-45 border border-white transition ${
+          current === i ? "bg-white" : "bg-transparent"
+        }`}
+      />
+    </button>
+  ))}
+</div>
+
         </div>
       </div>
     </div>

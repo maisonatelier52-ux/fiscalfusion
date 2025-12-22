@@ -125,27 +125,7 @@
             "medium":"https://medium.com/@travismonroe_60532"
         }
     },
-   {
-        "category":"finance",
-        "title":"Another rally for Alphabet leads the US stock market higher",
-        "shortdescription":"Another surge in Alphabet shares helped lift the U.S. stock market higher. Tech sector gains continue to support overall market momentum.",
-        "description":"The U.S. stock market rallied on Monday at the start of a week shortened by the Thanksgiving holiday, with the S&P 500 climbing 1.5% for one of its best days since summer, the Dow Jones Industrial Average rising 202 points or 0.4%, and the Nasdaq jumping 2.7%. Stocks were boosted by growing hopes that the Federal Reserve will cut its main interest rate again in December, which could lift the economy and investment prices. AI-linked stocks added strength as Alphabet surged 6.3% on praise for its Gemini AI model and Nvidia rose 2.1%. The gains followed weeks of sharp day-to-day and hour-to-hour swings driven by uncertainty over Fed policy and concerns that heavy investment into AI might be creating a bubble, echoing volatility not seen since April when President Donald Trump’s “Liberation Day” tariffs shocked markets. Still, the S&P 500 remains within 2.7% of last month’s record, with Ameriprise strategist Anthony Saglimbene noting that periodic pressure is historically healthy. More volatility could come as key reports arrive this week, including Tuesday’s wholesale inflation data for September, expected to show a 2.6% annual rise; a hotter reading could restrain the Fed from issuing a third rate cut this year, especially as inflation remains above the 2% target. Despite that, traders now see an 85% chance of a December cut, up from 71% on Friday and from below 50% a week earlier, according to CME Group. U.S. markets will close Thursday for Thanksgiving before Black Friday and Cyber Monday kick off. Elsewhere, Novo Nordisk shares tumbled 5.6% after its Alzheimer’s drug failed in a trial, and Grindr plunged 12.1% after ending talks with investors seeking to buy the company due to financing concerns. The S&P 500 rose 102.13 points to 6,705.12, the Dow climbed to 46,448.27, and the Nasdaq jumped to 22,872.01. Bitcoin continued its volatility, hovering near $89,000 after swinging between $82,000 and $94,000 over the past week, down from nearly $125,000 last month. Overseas markets were mixed, though Hong Kong’s Hang Seng jumped 2% on a 4.7% surge in Alibaba ahead of earnings and strong demand for its updated Qwen AI app. Treasury yields eased, with the 10-year falling to 4.03% from 4.06% Friday.",
-        "image":"/images/alphabet-stock-rally-2.webp",
-        "slug":"alphabet-rally-drives-us-stock-market-higher-2",
-        "date":"25, November 2025",
-          "author":{
-            "name":"Jenna Whitmore",
-            "role":"Entertainment Writer",
-            "bio":"Jenna covers entertainment, culture, and trending stories, bringing fresh perspective and concise reporting that highlights the people and moments shaping today’s entertainment landscape.",
-            "image":"/images/jenna-whitmore.webp",
-            "email":"jennawhitmore@fiscalfusion.org",
-            "twitter":"https://x.com/jennawhitm94520",
-            "facebook":"https://www.facebook.com/profile.php?id=61584976316567",
-            "instagram":"https://www.instagram.com/jennawhitmore2025/",
-            "substack":"https://substack.com/@jennawhitmore",
-            "medium":"https://medium.com/@jennawhitmore"
-        }
-    },
+
    {
         "category":"finance",
         "title":"US stocks drop on worries about banks",

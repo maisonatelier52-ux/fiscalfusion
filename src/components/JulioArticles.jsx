@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { FaFacebookF, FaInstagram, FaRss, FaSkype, FaTwitter, FaUser } from "react-icons/fa";
+import ShareOnInline from "./ShareOnline";
 
 export default function JulioArticles({ article }) {
 
@@ -51,14 +52,7 @@ export default function JulioArticles({ article }) {
 
       {/* Share Section */}
       <div className="flex items-center justify-between pt-0.5 border-t border-[#2f2f2f] border-b mt-10 pb-2 pt-2">
-        <div className="flex items-center gap-3 text-[14px] text-[#2f2f2f]">
-          <span className="font-normal font-serif">SHARE ON:</span>
-          <FaTwitter className="cursor-pointer" />
-          <FaFacebookF className="cursor-pointer" />
-          <FaSkype className="cursor-pointer" />
-          <FaRss className="cursor-pointer" />
-          <FaInstagram className="cursor-pointer" />
-        </div>
+       <ShareOnInline title={article.title} />
       </div>
       <div className="border mt-0.5 mb-8"></div>
     </div>
