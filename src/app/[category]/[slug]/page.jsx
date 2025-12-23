@@ -361,6 +361,46 @@ export default async function DetailPage({ params }) {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
+            "@type": "NewsArticle",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": `https://www.fiscalfusion.org/${article.category}/${article.slug}/`
+            },
+            "headline": article.title,
+            "description": article.shortdescription,
+            "image": {
+              "@type": "ImageObject",
+              "url": article.image.startsWith("http")
+                ? article.image
+                : `https://www.fiscalfusion.org${article.image}`,
+              "width": 1200,
+              "height": 630
+            },
+            "author": {
+              "@type": "Organization",
+              "name": "Fiscal Fusion",
+              "url": "https://www.fiscalfusion.org/"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Fiscal Fusion",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.fiscalfusion.org/images/fiscalfusion-logo.webp",
+                "width": 628,
+                "height": 116
+              }
+            },
+            "datePublished": article.date,
+            "dateModified": article.date
+          })
+        }}
+      />
+      <Script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
             "@type": "FAQPage",
             "mainEntity": [
               {

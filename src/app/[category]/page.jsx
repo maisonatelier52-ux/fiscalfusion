@@ -22,49 +22,49 @@ const allData = {
 export async function generateMetadata({ params }) {
   const { category } = await params;
 
-  const categoryMeta = {
-    business: {
-      title: "Business Coverage, Market Shifts & Industry Outlook – Fiscal Fusion",
-      description:
-        "Follow influential business developments, major corporate moves, emerging industries, and economic forces shaping global commerce in real time.",
-    },
+const categoryMeta = {
+  business: {
+    title: "Business News, Corporate Strategy & Market Trends – Fiscal Fusion",
+    description:
+      "Discover in-depth business news covering corporate strategy, market shifts, startup growth, and industry trends shaping the global economy.",
+  },
 
-    finance: {
-      title: "Financial Updates, Investment Analysis & Economic Trends – Fiscal Fusion",
-      description:
-        "Explore fresh financial insights, investment movements, economic signals, banking updates, and expert breakdowns of global market behavior.",
-    },
+  finance: {
+    title: "Finance News, Investments & Economic Insights – Fiscal Fusion",
+    description:
+      "Stay updated with financial news, investment strategies, banking developments, economic indicators, and expert insights from global markets.",
+  },
 
-    world: {
-      title: "International Headlines & Global Current Affairs – Fiscal Fusion",
-      description:
-        "Stay informed on critical global events, cross-border developments, geopolitical dynamics, and stories impacting nations around the world.",
-    },
+  world: {
+    title: "World News, Global Affairs & International Updates – Fiscal Fusion",
+    description:
+      "Get comprehensive coverage of world news, international affairs, geopolitical events, and global stories influencing nations worldwide.",
+  },
 
-    us: {
-      title: "U.S. News, National Reports & Key Developments – Fiscal Fusion",
-      description:
-        "Get timely coverage of major topics across the United States, including national policies, social shifts, domestic affairs, and breaking regional updates.",
-    },
+  us: {
+    title: "U.S. News, Politics & National Affairs – Fiscal Fusion",
+    description:
+      "Follow the latest U.S. news including national politics, policy decisions, social issues, economic updates, and major domestic developments.",
+  },
 
-    politics: {
-      title: "Political Coverage, Policy Shifts & Government Insights – Fiscal Fusion",
-      description:
-        "Track evolving political landscapes, legislative decisions, election narratives, leadership changes, and major decisions influencing governance.",
-    },
+  politics: {
+    title: "Politics News, Policy Decisions & Government Affairs – Fiscal Fusion",
+    description:
+      "Read timely political coverage on elections, government actions, policy reforms, leadership changes, and power dynamics shaping nations.",
+  },
 
-    entertainment: {
-      title: "Entertainment Stories, Culture Trends & Media Highlights – Fiscal Fusion",
-      description:
-        "Dive into the latest film releases, celebrity updates, streaming trends, cultural moments, and key happenings from across the entertainment world.",
-    },
+  entertainment: {
+    title: "Entertainment News, Celebrity Stories & Culture Trends – Fiscal Fusion",
+    description:
+      "Catch up on entertainment news featuring movies, television, celebrities, streaming platforms, pop culture trends, and media highlights.",
+  },
 
-    sports: {
-      title: "Sports Highlights, Match Analysis & Athlete Coverage – Fiscal Fusion",
-      description:
-        "Keep up with game results, competitive matchups, athlete performance, league developments, and major sporting events from across the globe.",
-    },
-  };
+  sports: {
+    title: "Sports News, Live Scores & Match Analysis – Fiscal Fusion",
+    description:
+      "Stay connected to sports news with match results, player performances, league updates, major tournaments, and expert game analysis.",
+  },
+};
 
   const meta =
     categoryMeta[category] || {

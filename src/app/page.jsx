@@ -14,22 +14,18 @@ import Script from "next/script";
 export const metadata = {
   metadataBase: new URL("https://www.fiscalfusion.org"),
 
-  title: {
-    default:
-      "Fiscal Fusion: Breaking Business & Global News in Real Time",
-    template: "%s | Fiscal Fusion"
-  },
+  title:"Fiscal Fusion – Breaking Business & Global Financial News",
 
   description:
-    "Get breaking business, finance & global news on Fiscal Fusion. Real-time market updates, US politics, world affairs & expert analysis.",
+ "Breaking business and global news from Fiscal Fusion, offering real-time market updates, U.S. politics, world affairs, and expert insights.",
 
   keywords:
     "Fiscal Fusion, latest news, business updates, financial insights, global headlines, US news, political coverage, entertainment stories, sports updates, market trends, economic reports, breaking news platform",
 
   openGraph: {
-    title: "Fiscal Fusion – Trusted Coverage on Business, Markets & Global News",
+    title: "Fiscal Fusion – Trusted Business, Market & Global News",
     description:
-      "Experience comprehensive news coverage with Fiscal Fusion. From business and finance to world affairs, politics, entertainment, and sports—stay ahead with timely and credible reporting.",
+      "Fiscal Fusion offers comprehensive, credible news coverage spanning business, finance, global affairs, politics, entertainment, and sports.",
     url: "https://www.fiscalfusion.org",
     siteName: "Fiscal Fusion",
     images: [
@@ -46,9 +42,9 @@ export const metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Fiscal Fusion – Breaking News & Market Intelligence",
+    title: "Fiscal Fusion – Breaking Business News & Market Intelligence",
     description:
-      "From breaking headlines to market trends, Fiscal Fusion keeps you connected to the news that matters across business, finance, global events, politics, entertainment, and sports.",
+      "Fiscal Fusion delivers breaking headlines and market insights across business, finance, global events, politics, entertainment, and sports—keeping you informed in real time.",
     images: "https://www.fiscalfusion.org/images/fiscalfusion-logo.webp",
     site: "@fiscalfusion"
   },

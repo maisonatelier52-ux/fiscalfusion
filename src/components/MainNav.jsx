@@ -18,15 +18,14 @@ export default function MainNav() {
   onClick={() => setOpen(!open)}
   aria-label={open ? "Close menu" : "Open menu"}
   aria-expanded={open}
-  aria-controls="mobile-menu"
   className="w-9 h-9 bg-[#2f2f2f] border border-[#c1c0b4] flex items-center justify-center"
 >
 
-          <div className="flex flex-col gap-[3px]">
+          <span className="flex flex-col gap-[3px]">
             <span className="block w-5 h-[2px] bg-[#c1c0b4]"></span>
             <span className="block w-5 h-[2px] bg-[#c1c0b4]"></span>
             <span className="block w-5 h-[2px] bg-[#c1c0b4]"></span>
-          </div>
+          </span>
         </button>
       </div>
 
