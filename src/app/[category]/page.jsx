@@ -21,50 +21,51 @@ const allData = {
 
 export async function generateMetadata({ params }) {
   const { category } = await params;
-
+  
 const categoryMeta = {
   business: {
-    title: "Business News, Corporate Strategy & Market Trends – Fiscal Fusion",
+    title: "Business News | Market Trends & Corporate Updates",
     description:
-      "Discover in-depth business news covering corporate strategy, market shifts, startup growth, and industry trends shaping the global economy.",
+      "Get the latest business news, market trends, corporate strategies, and industry insights shaping the global economy.",
   },
 
   finance: {
-    title: "Finance News, Investments & Economic Insights – Fiscal Fusion",
+    title: "Finance News | Investment Tips & Economic Updates",
     description:
-      "Stay updated with financial news, investment strategies, banking developments, economic indicators, and expert insights from global markets.",
+      "Stay updated on finance news, investment strategies, banking, stock markets, and global economic developments.",
   },
 
   world: {
-    title: "World News, Global Affairs & International Updates – Fiscal Fusion",
+    title: "World News | Global Affairs & International Events",
     description:
-      "Get comprehensive coverage of world news, international affairs, geopolitical events, and global stories influencing nations worldwide.",
+      "Explore world news, global affairs, geopolitics, and international events impacting nations worldwide.",
   },
 
   us: {
-    title: "U.S. News, Politics & National Affairs – Fiscal Fusion",
+    title: "U.S. News | Politics, Economy & National Updates",
     description:
-      "Follow the latest U.S. news including national politics, policy decisions, social issues, economic updates, and major domestic developments.",
+      "Follow U.S. news on politics, national policies, economy, social issues, and major domestic events.",
   },
 
   politics: {
-    title: "Politics News, Policy Decisions & Government Affairs – Fiscal Fusion",
+    title: "Politics News | Elections, Policy & Government",
     description:
-      "Read timely political coverage on elections, government actions, policy reforms, leadership changes, and power dynamics shaping nations.",
+      "Read politics news covering elections, government policies, reforms, leadership changes, and power shifts.",
   },
 
   entertainment: {
-    title: "Entertainment News, Celebrity Stories & Culture Trends – Fiscal Fusion",
+    title: "Entertainment News | Movies, Celebs & Pop Culture",
     description:
-      "Catch up on entertainment news featuring movies, television, celebrities, streaming platforms, pop culture trends, and media highlights.",
+      "Catch entertainment news on movies, TV shows, celebrities, streaming, pop culture trends, and media highlights.",
   },
 
   sports: {
-    title: "Sports News, Live Scores & Match Analysis – Fiscal Fusion",
+    title: "Sports News | Live Scores, Matches & Analysis",
     description:
-      "Stay connected to sports news with match results, player performances, league updates, major tournaments, and expert game analysis.",
+      "Get sports news with live scores, match results, player stats, tournaments, and expert game analysis.",
   },
 };
+
 
   const meta =
     categoryMeta[category] || {

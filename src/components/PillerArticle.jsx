@@ -5,9 +5,9 @@ import PostNavigation from "./PostNavigation";
 import ProfileCard from "./ProfileCard";
 import RelatedPostsSection from "./RelatedNewsSection";
 import ReplyForm from "./ReplyForm";
-import SocialStats from "./SocialStats";
 
 export default function PillerArticle({ article, otherArticles }) {
+
   return (
     <div className="">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">

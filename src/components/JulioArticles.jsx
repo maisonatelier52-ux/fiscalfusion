@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FaFacebookF, FaInstagram, FaRss, FaSkype, FaTwitter, FaUser } from "react-icons/fa";
+import { FaUser } from "react-icons/fa";
 import ShareOnInline from "./ShareOnline";
 
 export default function JulioArticles({ article }) {

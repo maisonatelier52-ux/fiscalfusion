@@ -14,18 +14,16 @@ import Script from "next/script";
 export const metadata = {
   metadataBase: new URL("https://www.fiscalfusion.org"),
 
-  title:"Fiscal Fusion – Breaking Business & Global Financial News",
+  title:"Fiscal Fusion | Latest Business & Global Financial News Today",
 
   description:
- "Breaking business and global news from Fiscal Fusion, offering real-time market updates, U.S. politics, world affairs, and expert insights.",
-
+ "Stay ahead with Fiscal Fusion. Get real-time market updates, breaking business news, U.S. politics, and world affairs backed by expert financial insights.",
   keywords:
-    "Fiscal Fusion, latest news, business updates, financial insights, global headlines, US news, political coverage, entertainment stories, sports updates, market trends, economic reports, breaking news platform",
-
+    "Breaking global financial news, Real-time market updates, World economic reports, International business trends.,US political coverage, White House policy updates, Federal court news, Political campaign finance insights.,Breaking entertainment stories, Global sports updates, Emerging market trends",
   openGraph: {
-    title: "Fiscal Fusion – Trusted Business, Market & Global News",
+    title: "Fiscal Fusion | Real-Time Global Markets & Business News",
     description:
-      "Fiscal Fusion offers comprehensive, credible news coverage spanning business, finance, global affairs, politics, entertainment, and sports.",
+      "Fiscal Fusion delivers trusted news across business, finance, global affairs, politics, entertainment, and sports.",
     url: "https://www.fiscalfusion.org",
     siteName: "Fiscal Fusion",
     images: [
@@ -33,7 +31,7 @@ export const metadata = {
         url: "https://www.fiscalfusion.org/images/fiscalfusion-logo.webp",
         width: 1200,
         height: 630,
-        alt: "Fiscal Fusion – Reliable News & Market Intelligence"
+        alt: "Fiscal Fusion – Global News & Political Analysis"
       }
     ],
     locale: "en_US",
@@ -42,10 +40,10 @@ export const metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Fiscal Fusion – Breaking Business News & Market Intelligence",
+    title: "Fiscal Fusion – Breaking Business, Political & Finance News",
     description:
-      "Fiscal Fusion delivers breaking headlines and market insights across business, finance, global events, politics, entertainment, and sports—keeping you informed in real time.",
-    images: "https://www.fiscalfusion.org/images/fiscalfusion-logo.webp",
+      "Fiscal Fusion delivers breaking headlines and insights across business, finance, politics, global events, entertainment, and sports in real time.",
+       images: "https://www.fiscalfusion.org/images/fiscalfusion-logo.webp",
     site: "@fiscalfusion"
   },
 
@@ -71,85 +69,84 @@ export const metadata = {
 export default function Home() {
   return (
     <main>
-      <>
-        {/* Organization / NewsMediaOrganization */}
-        <Script
-          id="schema-newsmediaorganization"
-          type="application/ld+json"
-          strategy="beforeInteractive"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "NewsMediaOrganization",
-              "@id": "https://www.fiscalfusion.org/#organization",
-              "name": "Fiscal Fusion",
-              "url": "https://www.fiscalfusion.org",
-              "logo": {
-                "@type": "ImageObject",
-                "url": "https://www.fiscalfusion.org/images/fiscalfusion-logo.webp",
-                "width": 1024,
-                "height": 1024
-              },
-              "sameAs": [
-                "https://substack.com/@fiscalfusion1",
-                "https://medium.com/@intuitive_maize_hornet_150"
-              ]
-            })
-          }}
-        />
+   <>
+  {/* Organization - Enhanced with Contact & Ethics */}
+  <Script
+    id="schema-newsmediaorganization"
+    type="application/ld+json"
+    strategy="beforeInteractive"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "NewsMediaOrganization",
+        "@id": "https://www.fiscalfusion.org/#organization",
+        "name": "Fiscal Fusion",
+        "url": "https://www.fiscalfusion.org",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.fiscalfusion.org/images/fiscalfusion-logo.webp",
+          "width": 1024,
+          "height": 1024
+        },
+        "sameAs": [
+          "https://substack.com/@fiscalfusion1",
+          "https://medium.com/@intuitive_maize_hornet_150"
+          
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "editorial",
+          "email": "contact@fiscalfusion.org" 
+        }
+      })
+    }}
+  />
 
-        {/* Website */}
-        <Script
-          id="schema-website"
-          type="application/ld+json"
-          strategy="beforeInteractive"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "WebSite",
-              "@id": "https://www.fiscalfusion.org/#website",
-              "url": "https://www.fiscalfusion.org",
-              "name": "Fiscal Fusion",
-              "publisher": {
-                "@id": "https://www.fiscalfusion.org/#organization"
-              }
-            })
-          }}
-        />
+  {/* WebSite - Added Search Box capability */}
+  <Script
+    id="schema-website"
+    type="application/ld+json"
+    strategy="beforeInteractive"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://www.fiscalfusion.org/#website",
+        "url": "https://www.fiscalfusion.org",
+        "name": "Fiscal Fusion",
+        "publisher": { "@id": "https://www.fiscalfusion.org/#organization" },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://www.fiscalfusion.org/search?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      })
+    }}
+  />
 
-        {/* Site Navigation */}
-        <Script
-          id="schema-sitenavigation"
-          type="application/ld+json"
-          strategy="beforeInteractive"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "SiteNavigationElement",
-              "name": [
-                "Home",
-                "Business",
-                "Finance",
-                "Politics",
-                "U.S.",
-                "World",
-                "Sports",
-                "Entertainment"
-              ],
-              "url": [
-                "https://www.fiscalfusion.org",
-                "https://www.fiscalfusion.org/business",
-                "https://www.fiscalfusion.org/finance",
-                "https://www.fiscalfusion.org/politics",
-                "https://www.fiscalfusion.org/us",
-                "https://www.fiscalfusion.org/world",
-                "https://www.fiscalfusion.org/sports",
-                "https://www.fiscalfusion.org/entertainment"
-              ]
-            })
-          }}
-        />
-      </>
+  {/* Site Navigation - Fixed Array Structure */}
+  <Script
+    id="schema-sitenavigation"
+    type="application/ld+json"
+    strategy="beforeInteractive"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "itemListElement": [
+          { "@type": "SiteNavigationElement", "position": 1, "name": "Business", "url": "https://www.fiscalfusion.org/business" },
+          { "@type": "SiteNavigationElement", "position": 2, "name": "Finance", "url": "https://www.fiscalfusion.org/finance" },
+          { "@type": "SiteNavigationElement", "position": 3, "name": "Politics", "url": "https://www.fiscalfusion.org/politics" },
+          { "@type": "SiteNavigationElement", "position": 4, "name": "U.S.", "url": "https://www.fiscalfusion.org/us" },
+          { "@type": "SiteNavigationElement", "position": 5, "name": "World", "url": "https://www.fiscalfusion.org/world" },
+          { "@type": "SiteNavigationElement", "position": 5, "name": "World", "url": "https://www.fiscalfusion.org/sports" },
+          { "@type": "SiteNavigationElement", "position": 5, "name": "World", "url": "https://www.fiscalfusion.org/entertainment" }
+
+        ]
+      })
+    }}
+  />
+</>
 
       <HeroSection data={[businessData[8], politicsData[0], sportsData[3]]} />
       {/* <PressviewHero />  */}

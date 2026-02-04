@@ -7,7 +7,7 @@ const article = {
   category: "business",
   title: "The Enduring Influence of Traditional Banking Families",
   image: "/images/julio-herrera-velutini-banking-legacy.webp",
-  date: "08 December 2025",
+  date: "04, February 2026",
   shortdescription: "",
   sub: [
     {
