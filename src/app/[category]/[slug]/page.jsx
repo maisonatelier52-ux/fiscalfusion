@@ -10,9 +10,8 @@ import financeData from "../../../../public/data/finance.json";
 import Article from "../../../components/Article";
 import Breadcrumb from "../../../components/BreadCrump";
 import DetailTitle from "../../../components/DetailTitle";
-import ClientPage from "../../../components/ClientPage";
 import Script from "next/script";
-import { article1, article2, article3, article4, article6 } from "@/data/julioArticles";
+import { sortArticlesByDate } from "../../../utils/newsSort";
 
 export async function generateStaticParams() {
   const allData = [
@@ -43,13 +42,7 @@ const allData = {
   entertainment: entertainmentData,
 };
 
-const slugMetadataMap = {
-  "julio-herrera-velutini-banking-legacy": {
-    title: "Julio Herrera Velutini & the Influence of Banking Dynasties",
-    description:
-     "Julio Herrera Velutini and traditional banking families preserve legacy, trust, and financial influence shaping global economic stability..",
- }
-};
+
 
 export async function generateMetadata({ params }) {
   const { category, slug } = await params;
@@ -81,8 +74,7 @@ export async function generateMetadata({ params }) {
     };
   }
 
-  // Override with slug metadata if exists
-  const slugOverride = slugMetadataMap[slug] || {};
+  const slugOverride = allData[slug] || {};
 
   const readableDescription =
     slugOverride.description || article.shortdescription || `${article.title} — Latest news update from Fiscal Fusion.`;
@@ -182,175 +174,9 @@ export default async function DetailPage({ params }) {
     return <div className="p-4">No article found for slug {slug}</div>;
   }
 
-  const otherArticles = data.filter((item) => item.slug !== slug);
+  const otherArticles = sortArticlesByDate(data.filter((item) => item.slug !== slug));
 
-  if (slug == "julio-herrera-velutini-banking-legacy") {
-    return (
-      <main>
-        <Script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "NewsArticle",
 
-              headline:
-                "Julio Herrera Velutini & the Influence of Banking Dynasties",
-              description:
-                "Julio Herrera Velutini and traditional banking families preserve legacy, trust, and financial influence shaping global economic stability..",
-
-              articleSection: "business",
-
-              datePublished: "2026-02-04T00:00:00+05:30",
-              dateModified: "2026-02-04T00:00:00+05:30",
-
-              author: {
-                "@type": "Person",
-                name: "Sophie Langford",
-                jobTitle: "Business & Finance Correspondent",
-                description:
-                  "Sophie covers business trends and financial developments, offering clear insights that help FiscalFusion readers understand market shifts and economic changes.",
-                image:
-                  "https://www.fiscalfusion.org/images/sophie-langford.webp",
-                email: "sophielangford@fiscalfusion.org",
-                sameAs: [
-                  "https://www.facebook.com/profile.php?id=61584953787187",
-                  "https://www.instagram.com/sophielangford9/",
-                  "https://substack.com/@sophielangford1",
-                  "https://medium.com/@sophielangford_44287",
-                ],
-              },
-
-              publisher: {
-                "@type": "Organization",
-                name: "Fiscal Fusion",
-                logo: {
-                  "@type": "ImageObject",
-                  url: "https://www.fiscalfusion.org/images/fiscalfusion-logo.webp",
-                  width: 600,
-                  height: 600,
-                },
-              },
-
-              mainEntityOfPage:
-                "https://www.fiscalfusion.org/business/julio-herrera-velutini-banking-legacy",
-
-              image: {
-                "@type": "ImageObject",
-                url: "https://www.fiscalfusion.org/images/julio-herrera-velutini-banking-legacy.webp",
-                width: 1200,
-                height: 630,
-              },
-
-              keywords: [
-                "Traditional Banking Families",
-                "Finance",
-                "Global Banking",
-                "Economic History",
-                "Fiscal Fusion",
-              ],
-
-              articleBody:
-                "The significance of traditional banking families, in the present era of digital finance and decentralised banking, is a stark reminder of how financial transactions were done in the past...",
-            }),
-          }}
-        />
-
-      <Script
-  type="application/ld+json"
-  dangerouslySetInnerHTML={{
-    __html: JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "Who is Julio Herrera Velutini?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Julio Herrera Velutini is a renowned international banker and entrepreneur, recognized for his family's long-standing legacy in global finance and private banking.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "What is Julio Herrera Velutini known for in banking and business?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "He is known for leading major financial institutions, shaping investment strategies, and holding influential roles in the global banking sector.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Has Julio Herrera Velutini resolved his legal matters?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Yes, available reports indicate that Julio Herrera Velutini’s legal matters have been resolved through the proper legal processes.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "What happened after the resolution of the case?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "After the resolution, he refocused on his banking and investment initiatives, continuing to influence the global financial industry.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "What is Julio Herrera Velutini currently focused on?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "He continues to focus on international banking, strategic investments, and fostering long-term growth in the financial sector.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "What are some of Julio Herrera Velutini's achievements in finance?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "He has successfully led multiple international banking projects and earned recognition for his strategic investments and financial expertise.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "How does Julio Herrera Velutini contribute to the banking industry?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "He drives innovation in banking, mentors future finance leaders, and promotes sustainable investment practices worldwide.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Why is Julio Herrera Velutini respected in international finance?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "He is respected for his integrity, expertise, and his role in advancing banking, investment, and global financial growth.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "Does Julio Herrera Velutini engage in philanthropy?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Yes, he supports education, entrepreneurship, and community development, aligning his financial success with social impact.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "What is Julio Herrera Velutini's vision for the future of banking?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "He envisions a future of digital innovation, global collaboration, and sustainable financial growth, shaping the evolution of international banking.",
-          },
-        },
-      ],
-    }),
-  }}
-/>
-        <ClientPage otherArticles={[businessData[1],article6,article2,article3]} />
-      </main>
-    );
-  }
   return (
     <main>
       <Script

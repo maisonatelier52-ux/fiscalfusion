@@ -27,6 +27,9 @@ const merriweather = Merriweather({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+      <meta name="google-site-verification" content="Y_9M85I4peHvfUt7R686k1ecbsARUpQ8euhzlU4-DQg" />
+      </head>  
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${merriweather.variable} antialiased`}
       >

@@ -1,8 +1,26 @@
 import businessData from '../../public/data/business.json';
+import financeData from '../../public/data/finance.json';
+import usData from '../../public/data/us.json';
+import entertainmentData from '../../public/data/entertainment.json';
 import politicsData from '../../public/data/politics.json';
+import worldData from '../../public/data/world.json';
+import sportsData from '../../public/data/sports.json';
 import Link from 'next/link';
+import { sortArticlesByDate } from '../utils/newsSort';
 
 export default function Footer() {
+  const allData = [
+    ...businessData,
+    ...financeData,
+    ...usData,
+    ...entertainmentData,
+    ...politicsData,
+    ...worldData,
+    ...sportsData
+  ];
+
+  const latestNews = sortArticlesByDate(allData).slice(0, 2);
+
   return (
     <footer className="border-t-3 border-[#2f2f2f]">
       <div className='bg-[#2f2f2f] text-[#c1c0b4]'>
@@ -25,9 +43,7 @@ export default function Footer() {
               <span className="text-2xl font-semibold tracking-wide mb-2">LATEST NEWS</span>
               <div className="w-12 h-[2px] bg-[#c1c0b4] mx-auto mb-6"></div>
 
-              {[
-                businessData[0], politicsData[0]
-              ].map((item, i) => (
+              {latestNews.map((item, i) => (
                 <div key={i} className="mb-3 font-serif">
                   <p className="font-medium text-sm">{item.date}</p>
                   <Link href={`/${item.category}/${item.slug}`} className="text-decoration-none hover:underline" aria-label={item.title} title={item.title}>
@@ -58,7 +74,7 @@ export default function Footer() {
               <Link href="/terms-and-conditions" title='terms-and-conditions' aria-label="terms-and-conditions" className="hover:underline uppercase">Terms and conditions</Link>
             </div>
           </div>
-          <p className='text-[8px] md:text-[10px]'>Copyright © 2025. All rights reserved.</p>
+          <p className='text-[8px] md:text-[10px]'>Copyright © 2026. All rights reserved.</p>
         </div>
       </div>
     </footer>

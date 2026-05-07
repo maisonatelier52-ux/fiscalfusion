@@ -18,7 +18,7 @@ const BlogCard = ({ image, category, title, date, slug, description, name }) => 
             />
           </div>
           <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 
-                        bg-[#2f2f2f] text-white text-sm tracking-wide 
+                        bg-[#2f2f2f] text-white capitalize text-sm tracking-wide 
                         px-4 py-2 shadow-md border border-gray-300">
             <span className="mx-1">♦</span>
             {category}

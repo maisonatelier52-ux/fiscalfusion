@@ -43,7 +43,7 @@ export default function PostGrid({ data }) {
                       className="object-cover group-hover:scale-105 transition duration-300"
                     />
                   </div>
-                  <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-[#2f2f2f] text-white text-sm tracking-wide px-3 py-1 shadow-md border border-gray-300">
+                  <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-[#2f2f2f] capitalize text-white text-sm tracking-wide px-3 py-1 shadow-md border border-gray-300">
                     <span className="mx-1">♦</span>
                     {item.category}
                     <span className="mx-1">♦</span>

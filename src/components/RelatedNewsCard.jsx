@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaUser, FaCalendarAlt } from "react-icons/fa";
 
-export default function RelatedNewsCard({ image, category, author, slug, title, date, comments }) {
+export default function RelatedNewsCard({ image, category, author, slug, title, date, topic }) {
   return (
     <div className="text-center">
       <div className="pt-4 pb-5 p-2">
@@ -18,9 +18,9 @@ export default function RelatedNewsCard({ image, category, author, slug, title, 
             </div>
           </Link>
 
-          <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-[#2f2f2f] text-white text-sm tracking-wide px-3 py-1 shadow-md border border-gray-300">
+          <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-[#2f2f2f] text-white capitalize text-sm tracking-wide px-3 py-1 shadow-md border border-gray-300">
             <span className="mx-1">♦</span>
-            {category}
+            {topic}
             <span className="mx-1">♦</span>
           </div>
 

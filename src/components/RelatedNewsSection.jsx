@@ -20,6 +20,7 @@ export default function RelatedPostsSection({ otherArticles }) {
               comments={item.comments}
               author={item.author.name}
               slug={item.slug}
+              topic={item.topic}
             />
           ))}
         </div>

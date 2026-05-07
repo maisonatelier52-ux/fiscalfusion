@@ -2,6 +2,8 @@ import Card from "../components/Card";
 import HeroSection from "../components/Herosection";
 import PostGrid from "../components/PostGrid";
 import Section from "../components/Section";
+import { sortArticlesByDate } from "../utils/newsSort";
+
 import businessData from '../../public/data/business.json'
 import financeData from '../../public/data/finance.json';
 import usData from '../../public/data/us.json';
@@ -66,7 +68,20 @@ export const metadata = {
   }
 };
 
+
 export default function Home() {
+  const allData = [
+    ...businessData,
+    ...financeData,
+    ...usData,
+    ...entertainmentData,
+    ...politicsData,
+    ...worldData,
+    ...sportsData
+  ];
+
+  const sortedNews = sortArticlesByDate(allData);
+
   return (
     <main>
    <>
@@ -148,12 +163,12 @@ export default function Home() {
   />
 </>
 
-      <HeroSection data={[businessData[8], politicsData[0], sportsData[3]]} />
+      <HeroSection data={sortedNews.slice(0, 3)} />
       {/* <PressviewHero />  */}
-      <PostGrid data={[politicsData[1], politicsData[2], politicsData[3], businessData[0]]} />
+      <PostGrid data={sortedNews.slice(3, 7)} />
       {/* <LatestReviews /> */}
-      <Card data={[businessData[3], sportsData[1], worldData[0]]} />
-      <Section data={[entertainmentData[0], worldData[1], usData[0], financeData[0]]} />
+      <Card data={sortedNews.slice(7, 10)} />
+      <Section data={sortedNews.slice(10, 14)} />
     </main>
   );
 }

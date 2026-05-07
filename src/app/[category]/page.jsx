@@ -8,6 +8,7 @@ import entertainmentData from "../../../public/data/entertainment.json";
 import PaginatedGrid from "../../components/PaginatedGrid";
 import Breadcrumb from "../../components/BreadCrump";
 import SectionTitle from "../../components/SectionTitle";
+import { sortArticlesByDate } from "../../utils/newsSort";
 
 const allData = {
   business: businessData,
@@ -76,7 +77,8 @@ const categoryMeta = {
   const siteUrl = "https://www.fiscalfusion.org";
   const categoryUrl = `${siteUrl}/${category}`;
 
-  const firstArticle = allData[category]?.[0];
+  const categoryData = allData[category] ? sortArticlesByDate(allData[category]) : [];
+  const firstArticle = categoryData[0];
   const firstArticleImage =
     firstArticle?.image?.startsWith("http")
       ? firstArticle.image
@@ -129,16 +131,18 @@ export default async function CategoryPage({ params }) {
   const resolvedParams = await params;
 
   const category = resolvedParams.category;
-  const data = allData[category];
+  const rawData = allData[category];
 
-  if (!data) return <div>Category not found</div>;
+  if (!rawData) return <div>Category not found</div>;
+
+  const sortedData = sortArticlesByDate(rawData);
 
   return (
     <>
       <Breadcrumb category={category} />
       <SectionTitle title={category} />
       <div >
-        <PaginatedGrid data={data} />
+        <PaginatedGrid data={sortedData} />
       </div>
     </>
   );
