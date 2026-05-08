@@ -13,7 +13,7 @@ export default function HeroSection({ data }) {
   const currentSlide = data[current];
 
   return (
-    <div className="relative w-full h-[200px] md:h-[500px] overflow-hiddenn">
+    <div className="relative w-full h-[250px] md:h-[600px] overflow-hidden">
 
       {data?.map((item, index) => (
         <div
@@ -25,7 +25,7 @@ export default function HeroSection({ data }) {
             src={item.image}
             alt={item.title}
             fill
-            className="object-cover"
+            className="object-cover object-top"
             priority
           />
         </div>

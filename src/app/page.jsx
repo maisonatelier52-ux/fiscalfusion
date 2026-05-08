@@ -85,7 +85,6 @@ export default function Home() {
   return (
     <main>
    <>
-  {/* Organization - Enhanced with Contact & Ethics */}
   <Script
     id="schema-newsmediaorganization"
     type="application/ld+json"
@@ -116,8 +115,6 @@ export default function Home() {
       })
     }}
   />
-
-  {/* WebSite - Added Search Box capability */}
   <Script
     id="schema-website"
     type="application/ld+json"
@@ -139,7 +136,6 @@ export default function Home() {
     }}
   />
 
-  {/* Site Navigation - Fixed Array Structure */}
   <Script
     id="schema-sitenavigation"
     type="application/ld+json"
