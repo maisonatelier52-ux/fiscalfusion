@@ -34,7 +34,7 @@ const Card = ({ category, slug, title, description, name, date }) => {
       </div>
       <div className="flex flex-col items-center px-2 flex-grow">
         <h3
-          className="text-[26px] font-normal text-[#2f2f2f] leading-[1.1] tracking-tight line-clamp-1 md:line-clamp-2 md:mb-3 mb-2"
+          className="text-[26px] font-normal text-[#2f2f2f] leading-[1.1] tracking-tight line-clamp-1 md:line-clamp-2 md:mb-3 mb-2 md:h-[58px] overflow-hidden"
         >
           {title}
         </h3>
@@ -43,12 +43,12 @@ const Card = ({ category, slug, title, description, name, date }) => {
             text-gray-600 leading-[1.3] tracking-tight text-[13px] font-serif
             overflow-hidden
             mb-4
-            line-clamp-3        /* 🌟 Ensures equal space */
+            line-clamp-3 md:h-[52px]
           "
         >
           {description}
         </p>
-        <div className="flex items-center justify-center gap-1 text-[8px] text-gray-600 mb-3 ">
+        <div className="flex items-center justify-center gap-1 text-[8px] text-gray-600 mb-6 ">
           <FaUser className="text-gray-600" />
           <span>{name}</span>
 
@@ -58,7 +58,7 @@ const Card = ({ category, slug, title, description, name, date }) => {
 
           <span>{date}</span>
         </div>
-        <div className="w-full flex flex-col items-center cursor-pointer">
+        <div className="w-full flex flex-col items-center cursor-pointer mt-auto">
           <div className="w-full">
             <div className="border-t-2 border-[#2f2f2f]" />
             <div className="border-t border-[#2f2f2f] mt-0.5" />
@@ -112,7 +112,7 @@ export default function ThreeCardsSection({ data }) {
           </div>
         ))}
       </div>
-      <div className="flex items-center gap-3 mt-17 md:mt-0">
+      <div className="flex items-center gap-3 mt-17 md:mt-10">
         <div className="relative md:w-8 md:h-8 w-5 h-5 flex items-center justify-center rotate-45">
           <div className="absolute inset-0 border-2 border-[#2f2f2f]" />
           <div className="absolute inset-1 border border-[#d9d9d9]" />
