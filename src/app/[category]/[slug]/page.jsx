@@ -57,7 +57,7 @@ export async function generateMetadata({ params }) {
     entertainment: entertainmentData,
   };
 
-  const articles = allDataMap[category] || [];
+  const articles = allDataMap[category?.toLowerCase()] || [];
   const article = articles.find((a) => a.slug === slug);
 
   const siteUrl = "https://www.fiscalfusion.org";
@@ -170,9 +170,7 @@ export default async function DetailPage({ params }) {
   if (!data) return notFound();
 
   const article = data.find((item) => item.slug === slug);
-  if (!article) {
-    return <div className="p-4">No article found for slug {slug}</div>;
-  }
+  if (!article) return notFound();
 
   const otherArticles = sortArticlesByDate(data.filter((item) => item.slug !== slug));
 
