@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const categories = [
   { label: "World", slug: "world" },
-  { label: "U.S", slug: "us" },
+  { label: "U.S. News", slug: "us" },
   { label: "Business", slug: "business" },
   { label: "Politics", slug: "politics" },
   { label: "Finance", slug: "finance" },

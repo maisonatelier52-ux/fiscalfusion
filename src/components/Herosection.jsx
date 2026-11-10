@@ -34,22 +34,24 @@ export default function HeroSection({ data }) {
       <div className="absolute inset-0 flex items-center justify-center z-10">
         <div
           className="
-    bg-[#c1c0b4]/80
-    h-full w-[40%] md:w-[35%]
-    flex flex-col items-center 
+    bg-[#c1c0b4]/85
+    h-full w-[65%] md:w-[50%] lg:w-[45%]
+    flex flex-col items-center justify-center
     text-center
-    md:pt-30 pb-0
-    p-5
+    px-4 py-3 md:px-10 md:py-8
   "
         >
-          <h2 className="text-sm md:text-6xl text-[#2f2f2f] capitalize font-light tracking-wide md:mb-5 mb-1">
-            {currentSlide.category}
+          <h2
+            style={{ fontFamily: "var(--font-merriweather), Georgia, serif" }}
+            className="text-[11px] md:text-[26px] text-[#222] font-bold tracking-tight md:mb-4 mb-1.5 leading-[1.3]"
+          >
+            {currentSlide.title}
           </h2>
           <svg
             width="100%"
             height="6"
             viewBox="0 0 48 6"
-            className="mx-auto max-w-[20px] md:max-w-[280px] mb-3 md:mb-10"
+            className="mx-auto max-w-[30px] md:max-w-[240px] mb-2 md:mb-5 shrink-0"
             fill="none"
             stroke="#e6e6e1"
             strokeWidth="2"
@@ -57,11 +59,11 @@ export default function HeroSection({ data }) {
             <path d="M0 3 L3 0 L6 6 L9 0 L12 6 L15 0 L18 6 L21 0 L24 6 L27 0 L30 6 L33 0 L36 6 L39 0 L42 6 L45 0 L48 3" />
           </svg>
 
-          <h3 className="opacity-90 text-[6px] md:text-[13px] font-semibold text-[#2f2f2f] font-serif mb-2 md:mb-8">
-            {currentSlide.title}
+          <h3 className="opacity-90 text-[7px] md:text-[14px] font-normal text-[#2f2f2f] font-serif mb-2 md:mb-6 leading-[1.45] line-clamp-3">
+            {currentSlide.shortdescription}
           </h3>
           <div
-            className="cursor-pointer text-white text-[6px] md:text-2xl md:mb-8 mb-3"
+            className="cursor-pointer text-white text-[8px] md:text-xl md:mb-5 mb-2"
             onClick={nextSlide}
           >
             ✕
@@ -74,7 +76,7 @@ export default function HeroSection({ data }) {
              px-2 py-1 md:px-4 md:py-2 font-bold text-gray-200
              bg-[#2f2f2f] border-[1px] md:border-[4px] border-[#2f2f2f]
              hover:bg-white hover:border-white transition-all duration-300
-             md:mb-10 mb-3 inline-block"
+             md:mb-6 mb-2 inline-block"
           >
             <span className="absolute inset-0 border md:border-[2px] border-white group-hover:border-[#2f2f2f] pointer-events-none"></span>
             <span className="relative group-hover:text-[#2f2f2f]">

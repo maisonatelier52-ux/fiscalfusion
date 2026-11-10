@@ -5,7 +5,7 @@ export default function CategoriesWidget() {
     { name: "World", slug: "world" },
     { name: "Business", slug: "business" },
     { name: "Politics", slug: "politics" },
-    { name: "U.S", slug: "us" },
+    { name: "U.S. News", slug: "us" },
     { name: "Finance", slug: "finance" },
     { name: "Sports", slug: "sports" },
     { name: "Entertainment", slug: "entertainment" },

@@ -10,6 +10,7 @@ function truncateWords(text, wordLimit = 4) {
 
 export default function Breadcrumb({ category, title }) {
   const shortTitle = truncateWords(title, 4);
+  const displayCategory = category?.toLowerCase() === "us" ? "U.S. NEWS" : category?.toUpperCase();
 
   return (
     <div
@@ -27,7 +28,7 @@ export default function Breadcrumb({ category, title }) {
             <>
               <span>/</span>
               <span className="cursor-pointer hover:underline">
-                {category.toUpperCase()}
+                {displayCategory}
               </span>
             </>
           )}

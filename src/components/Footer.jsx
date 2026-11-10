@@ -26,7 +26,7 @@ export default function Footer() {
 
   const categories = [
     { href: "/world", label: "World" },
-    { href: "/us", label: "U.S." },
+    { href: "/us", label: "U.S. News" },
     { href: "/business", label: "Business" },
     { href: "/politics", label: "Politics" },
     { href: "/finance", label: "Finance" },
